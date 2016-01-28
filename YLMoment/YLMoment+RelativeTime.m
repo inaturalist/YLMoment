@@ -66,42 +66,42 @@ static NSString * const kYLMomentRelativeTimeStringTable = @"YLMomentRelativeTim
   NSString *formattedString = @"";
   int unit                  = 0;
   if (seconds < 45) {
-    formattedString = [localBundle localizedStringForKey:@"s" value:@"a few seconds" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"s" value:@"1min" table:kYLMomentRelativeTimeStringTable];
     unit            = seconds;
   }
   else if (minutes == 1) {
-    formattedString = [localBundle localizedStringForKey:@"m" value:@"a minute" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"m" value:@"1min" table:kYLMomentRelativeTimeStringTable];
   }
   else if (minutes < 45) {
-    formattedString = [localBundle localizedStringForKey:@"mm" value:@"%d minutes" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"mm" value:@"%dmin" table:kYLMomentRelativeTimeStringTable];
     unit            = minutes;
   }
   else if (hours == 1) {
-    formattedString = [localBundle localizedStringForKey:@"h" value:@"an hour" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"h" value:@"1h" table:kYLMomentRelativeTimeStringTable];
   }
   else if (hours < 22) {
-    formattedString = [localBundle localizedStringForKey:@"hh" value:@"%d hours" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"hh" value:@"%dh" table:kYLMomentRelativeTimeStringTable];
     unit            = hours;
   }
   else if (days == 1) {
-    formattedString = [localBundle localizedStringForKey:@"d" value:@"a day" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"d" value:@"1d" table:kYLMomentRelativeTimeStringTable];
   }
   else if (days <= 25) {
-    formattedString = [localBundle localizedStringForKey:@"dd" value:@"%d days" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"dd" value:@"%dd" table:kYLMomentRelativeTimeStringTable];
     unit            = days;
   }
   else if (days <= 45) {
-    formattedString = [localBundle localizedStringForKey:@"M" value:@"a month" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"M" value:@"1mo" table:kYLMomentRelativeTimeStringTable];
   }
   else if (days < 345) {
-    formattedString = [localBundle localizedStringForKey:@"MM" value:@"%d months" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"MM" value:@"%dmo" table:kYLMomentRelativeTimeStringTable];
     unit            = round(days / 30);
   }
   else if (years == 1) {
-    formattedString = [localBundle localizedStringForKey:@"y" value:@"a year" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"y" value:@"1y" table:kYLMomentRelativeTimeStringTable];
   }
   else {
-    formattedString = [localBundle localizedStringForKey:@"yy" value:@"%d years" table:kYLMomentRelativeTimeStringTable];
+    formattedString = [localBundle localizedStringForKey:@"yy" value:@"%dy" table:kYLMomentRelativeTimeStringTable];
     unit            = years;
   }
 
